@@ -1,5 +1,5 @@
 import React from 'react';
-import './InquireButton.css';
+import './Inquirebutton.css';
 
 const InquireButton = () => {
   return (
