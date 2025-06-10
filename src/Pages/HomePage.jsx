@@ -14,7 +14,7 @@ const Home = () => {
           <img
             alt="Vivekanand College Campus"
             className="hero-banner-image"
-            src="src\assets\vck.png"
+            src={Img1}
           />
           <div className="hero-overlay-text">
             <h1>Welcome to Vivekanand College!</h1>
@@ -48,8 +48,8 @@ const Home = () => {
 
         <h2>Campus Life & Facilities</h2>
         <div className="image-gallery">
-          <img alt="Students studying in library" src="src\assets\vck.jpg" />
-          <img alt="Students on campus ground" src="src\assets\vckstd.jpg" />
+          <img alt="Students studying in library" src={Img2} />
+          <img alt="Students on campus ground" src={Img3} />
         </div>
 
         <p>
