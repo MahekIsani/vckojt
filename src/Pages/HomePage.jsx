@@ -1,6 +1,10 @@
 // src/pages/Home.jsx
 import React from 'react';
 import './HomePage.css';
+import Img1 from '../assets/vck.png';
+import Img2 from '../assets/vck.jpg';
+import Img3 from '../assets/vckstd.jpg';
+
 
 const Home = () => {
   return (
