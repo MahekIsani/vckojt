@@ -1,5 +1,6 @@
 // src/pages/Home.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 import Img1 from '../assets/vck.png';
 import Img2 from '../assets/vck.jpg';
@@ -14,14 +15,12 @@ const Home = () => {
           <img
             alt="Vivekanand College Campus"
             className="hero-banner-image"
-            src={Img1}
+            src={Img1}        
           />
           <div className="hero-overlay-text">
-            <h1>Welcome to Vivekanand College!</h1>
+            <h1 style={{ color: 'White' }}>Welcome to Vivekanand College!</h1>
             <p>Your journey to excellence starts here.</p>
-            <a className="btn hero-btn" href="/admissions" data-discover="true">
-              Apply Now!
-            </a>
+            <Link className="btn hero-btn" to="/admissions">Apply Now!</Link>
           </div>
         </div>
 
@@ -69,5 +68,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
