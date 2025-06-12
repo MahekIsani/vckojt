@@ -15,6 +15,7 @@ import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 
 import './App.css';
+import ChatbotComponent from './components/Chatbot/ChatbotComponents.jsx';
 
 function App() {
   return (
@@ -30,8 +31,8 @@ function App() {
             <Route path="/admissions" element={<AdmissionPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
+          <ChatbotComponent></ChatbotComponent>
         </div>
-        <Footer />
       </div>
     </BrowserRouter>
   );
