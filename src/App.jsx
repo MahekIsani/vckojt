@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Courses from './pages/Courses';
-import Contact from './pages/Contact';
-import Apply from './pages/Apply';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Courses from './Pages/Courses';
+import Contact from './Pages/Contact';
+import Apply from './Pages/Apply';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import './App.css';
