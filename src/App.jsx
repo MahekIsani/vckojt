@@ -1,41 +1,47 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-// Pages
-import HomePage from './Pages/HomePage.jsx';
-import AboutPage from './Pages/AboutPage.jsx';
-import CoursesPage from "./Pages/CoursesPage.jsx";
-
-import ContactPage from './Pages/ContactPage.jsx';
-import AdmissionPage from './Pages/AdmissionPage.jsx';
-import NotFoundPage from './Pages/NotFoundPage.jsx';
-
-// Components
-import Header from './components/Header/Header.jsx';
-import Footer from './components/Footer/Footer.jsx';
-
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Courses from './pages/Courses';
+import Contact from './pages/Contact';
+import Apply from './pages/Apply';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import './App.css';
-import ChatbotComponent from './components/Chatbot/ChatbotComponents.jsx';
+import ChatbotComponent from './components/Chatbot/ChatbotComponents';
+import DeveloperInfoPopup from './components/DeveloperInfo/DeveloperInfoPopup';
 
-function App() {
+const App = () => {
+  const [showPopup, setShowPopup] = useState(true);
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
   return (
-    <BrowserRouter>
-      <div className="main-layout">
-        <Header />
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/courses" element={<CoursesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/admissions" element={<AdmissionPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-          <ChatbotComponent></ChatbotComponent>
-        </div>
+    <>
+    <div>
+        {/* Your main application content */}
+        <DeveloperInfoPopup
+          show={showPopup}
+          onClose={handleClosePopup}
+          studentName="Mahek Iqbal Isani"
+          studentPhotoUrl="/maku.png" // Path to their photo
+          uniqueMessage="Learned so much during this OJT! This app showcases my independent coding and deployment skills"
+        />
       </div>
-    </BrowserRouter>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/apply" element={<Apply />} />
+      </Routes>
+      <ChatbotComponent></ChatbotComponent>
+      <Footer/>
+      </>
+    
   );
-}
+};
 
 export default App;
